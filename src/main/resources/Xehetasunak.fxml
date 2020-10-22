@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehu.isad.controllers.XehetasunakKud">
+   <children>
+      <VBox fx:id="vBoxEdukia" alignment="TOP_CENTER" layoutX="25.0" layoutY="25.0" prefHeight="400.0" prefWidth="550.0">
+         <children>
+            <Label fx:id="lblXehetasunak" text="Liburuaren Xehetasunak:" textAlignment="CENTER">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" />
+               </VBox.margin>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <HBox fx:id="hBoxIzenb" prefHeight="0.0" prefWidth="550.0">
+               <children>
+                  <Label fx:id="lblIzenburua" text="Izenburua:">
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblIzenburuDatuak" maxWidth="400.0" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hBoxAzpitit" prefHeight="0.0" prefWidth="338.0">
+               <children>
+                  <Label fx:id="lblAzpititulua" text="Azpititulua:">
+                     <HBox.margin>
+                        <Insets left="56.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="lblAzpititDatuak">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hBoxArgit" prefHeight="0.0" prefWidth="252.0">
+               <children>
+                  <Label fx:id="lblArgitaletxeak" text="Argitaletxea(k):">
+                     <HBox.margin>
+                        <Insets left="28.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="lblArgitDatuak">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hBoxOrriKop" prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblOrriKop" text="Orri kopurua:">
+                     <HBox.margin>
+                        <Insets left="43.0" />
+                     </HBox.margin></Label>
+                  <Label fx:id="lblOrriKopDatuak">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hBoxIrudi" prefHeight="0.0" prefWidth="252.0">
+               <children>
+                  <Label fx:id="lblIrudia" text="Irudia:">
+                     <HBox.margin>
+                        <Insets left="88.0" />
+                     </HBox.margin></Label>
+                  <ImageView fx:id="imgIrudia" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <Button fx:id="btnAtzera" mnemonicParsing="false" onAction="#onClick" text="Atzera" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
