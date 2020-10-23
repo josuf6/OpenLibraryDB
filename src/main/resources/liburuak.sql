@@ -23,20 +23,11 @@ DROP TABLE IF EXISTS `Argitaletxea`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Argitaletxea` (
-  `izena` varchar(45) NOT NULL,
+  `izena` varchar(100) NOT NULL,
   PRIMARY KEY (`izena`),
   UNIQUE KEY `izena_UNIQUE` (`izena`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Argitaletxea`
---
-
-LOCK TABLES `Argitaletxea` WRITE;
-/*!40000 ALTER TABLE `Argitaletxea` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Argitaletxea` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `LiburuArgit`
@@ -46,24 +37,15 @@ DROP TABLE IF EXISTS `LiburuArgit`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `LiburuArgit` (
-  `liburuIsbn` varchar(45) NOT NULL,
-  `argitIzen` varchar(45) NOT NULL,
+  `liburuIsbn` varchar(100) NOT NULL,
+  `argitIzen` varchar(100) NOT NULL,
   PRIMARY KEY (`liburuIsbn`,`argitIzen`),
   UNIQUE KEY `liburuIsbn_UNIQUE` (`liburuIsbn`),
-  UNIQUE KEY `argitIzen_UNIQUE` (`argitIzen`),
+  KEY `fk_LiburuArgit_Argitaletxea_idx` (`argitIzen`),
   CONSTRAINT `fk_LiburuArgit_Argitaletxea` FOREIGN KEY (`argitIzen`) REFERENCES `Argitaletxea` (`izena`),
   CONSTRAINT `fk_LiburuArgit_Liburua` FOREIGN KEY (`liburuIsbn`) REFERENCES `Liburua` (`isbn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `LiburuArgit`
---
-
-LOCK TABLES `LiburuArgit` WRITE;
-/*!40000 ALTER TABLE `LiburuArgit` DISABLE KEYS */;
-/*!40000 ALTER TABLE `LiburuArgit` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `Liburua`
@@ -73,24 +55,15 @@ DROP TABLE IF EXISTS `Liburua`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Liburua` (
-  `isbn` varchar(45) NOT NULL,
-  `izenburua` varchar(45) DEFAULT NULL,
-  `azpititulua` varchar(45) DEFAULT NULL,
+  `isbn` varchar(100) NOT NULL,
+  `izenburua` varchar(100) DEFAULT NULL,
+  `azpititulua` varchar(100) DEFAULT NULL,
   `orriKop` int DEFAULT NULL,
-  `argazkiIzen` varchar(45) DEFAULT NULL,
+  `argazkiIzen` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`isbn`),
   UNIQUE KEY `isbn_UNIQUE` (`isbn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Liburua`
---
-
-LOCK TABLES `Liburua` WRITE;
-/*!40000 ALTER TABLE `Liburua` DISABLE KEYS */;
-/*!40000 ALTER TABLE `Liburua` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -101,4 +74,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-22 17:25:51
+-- Dump completed on 2020-10-23 18:03:26
