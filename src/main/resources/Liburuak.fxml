@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="panela" prefHeight="130.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehu.isad.controllers.LiburuKud">
+<AnchorPane fx:id="panela" prefHeight="130.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehu.isad.controllers.ui.LiburuKud">
    <children>
       <Label fx:id="lblHautatu" layoutX="127.0" layoutY="15.0" text="Liburu bat hautatu:" />
       <ComboBox fx:id="comboLiburuak" layoutX="27.0" layoutY="43.0" prefWidth="326.0" promptText="Hautatu..." />
