@@ -56,10 +56,11 @@ DROP TABLE IF EXISTS `Liburua`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Liburua` (
   `isbn` varchar(100) NOT NULL,
-  `izenburua` varchar(100) DEFAULT NULL,
+  `izenburua` varchar(200) DEFAULT NULL,
   `azpititulua` varchar(100) DEFAULT NULL,
   `orriKop` int DEFAULT NULL,
   `argazkiIzen` varchar(100) DEFAULT NULL,
+  `argazkiURL` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`isbn`),
   UNIQUE KEY `isbn_UNIQUE` (`isbn`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -74,4 +75,4 @@ CREATE TABLE `Liburua` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-23 18:03:26
+-- Dump completed on 2020-10-24 17:15:49
